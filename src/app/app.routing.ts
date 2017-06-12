@@ -7,11 +7,13 @@ import {ErrorComponent} from './components/error.component';
 import { ProductosListComponent } from './components/productos-list.component';
 import { ProductoAddComponent } from './components/producto-add.component';
 
+
 const appRoutes: Routes = [
 	{ path : '', component: HomeComponent},
 	{ path : 'home', component: HomeComponent},
 	{ path : 'productos', component: ProductosListComponent},
 	{ path : 'agregarProducto', component: ProductoAddComponent},
+
 	{ path : '**', component: ErrorComponent}
 ];
 

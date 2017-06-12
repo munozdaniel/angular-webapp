@@ -15,6 +15,7 @@ import { ProductoAddComponent } from './components/producto-add.component';
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, ErrorComponent, ProductosListComponent,ProductoAddComponent
+
   ],
   imports: [
     BrowserModule,

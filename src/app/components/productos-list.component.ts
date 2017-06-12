@@ -6,6 +6,7 @@ import {Producto} from '../models/Producto';
 	selector: 'productos-list',
 	templateUrl: '../views/productos-list.html',
 	providers: [ProductoService]
+
 })
 
 export  class ProductosListComponent
@@ -16,6 +17,7 @@ export  class ProductosListComponent
 		private _route: ActivatedRoute,
 		private _router: Router,
 		private _productoService: ProductoService
+
 	)
 	{
 		this.titulo = "Listado de productos";
@@ -23,7 +25,7 @@ export  class ProductosListComponent
 
 	ngOnInit()
 	{
-		console.log("Productos LIsta");
+		//console.log("Productos LIsta");
 		this._productoService.getProductos().subscribe(
 			result => {
 				
@@ -40,5 +42,6 @@ export  class ProductosListComponent
 				console.log(<any>error);
 			}
 		);
+
 	}
 }
