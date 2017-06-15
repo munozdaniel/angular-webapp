@@ -78,3 +78,20 @@
 	padding-top: 10px;
 	color:gray;
 }
+
+.img-producto{
+	max-height: 200px;
+	width:100%;
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+.img-relleno{
+	width: 100%;
+	background-color: #ccc;
+	height: 200px;
+}
+.img-container{
+	width: 100%;
+	overflow: hidden;;
+}

@@ -4,12 +4,27 @@
 	<div class="alert alert-warning"> CARGANDO PRODUCTOS ... </div>
 </div>
 <div *ngIf="productos">
-	<ul>
-		<li *ngFor="let p of productos">
-			<strong>{{p.nombre}}</strong>
-			<p>{{p.precio}}</p>
-		</li>
-	</ul>
+	<div class="row">
+		<div class="col-md-3" *ngFor="let p of productos">
+			<div class="thumbnail">
+				<div *ngIf="p.imagen" class="img-container">
+					<img class="img-producto" src="http://localhost/angular4backend/uploads/{{p.imagen}}"  />
+				</div>
+				<div *ngIf="!p.imagen">
+					<div class="img-relleno"></div>
+				</div>
+				<div class="caption">
+				<h3>{{p.nombre}}</h3>
+				<p>$ {{p.precio}}</p>
+				<p>
+					<a [routerLink]="['/detalleProducto',p.id]" class="btn btn-sm btn-primary">VER</a>
+					<a href="" class="btn btn-sm btn-success">EDITAR</a>
+					<a href="" class="btn btn-sm btn-danger">ELIMINAR</a>
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 	
 <hr>

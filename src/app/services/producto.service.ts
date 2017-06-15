@@ -49,4 +49,9 @@ export class ProductoService{
 			xhr.send(formData);
 		});
 	}
+	getProducto(id){
+		return this._http.get(this.url+'producto/'+id).map(
+			res => res.json()
+		);
+	}
 }
